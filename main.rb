@@ -24,10 +24,12 @@ class User
 
     private
 
+    # Utility method for the next_birthday method. If birthday has passed then return 1 else return 0
     def current_year_addition?
         birthday_in_past? ? 1 : 0
     end
 
+    # Checks if the birthday has already passed and returns true, else returns false
     def birthday_in_past?
         CURRENT_MONTH >= @date_of_birth.month && CURRENT_DAY >= @date_of_birth.day
     end
